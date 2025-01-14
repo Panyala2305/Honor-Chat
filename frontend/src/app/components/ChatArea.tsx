@@ -215,7 +215,7 @@ const ChatArea = () => {
 
             {/* Chat Messages Section  */}
 
-            {/* <div className="flex-1 overflow-y-auto mb-4">
+            <div className="flex-1 overflow-y-auto mb-4">
               {messages.map((msg, index) => (
                 <div
                   key={index}
@@ -226,21 +226,8 @@ const ChatArea = () => {
                   <p className="text-xs text-gray-500">{new Date(msg.timestamp).toLocaleTimeString()}</p>
                 </div>
               ))}
-            </div> */}
-            <div className="flex-1 overflow-y-auto mb-4 chat-box">
-              {messages.map((msg, index) => (
-                <div
-                  key={index}
-                  className={`p-2 mb-2 rounded-lg chat-bubble ${msg.senderId === curUser_id ? 'sent' : 'received'
-                    }`}
-                >
-                  <p className="text-sm">{msg.content}</p>
-                  <p className="text-xs text-gray-500">
-                    {new Date(msg.timestamp).toLocaleTimeString()}
-                  </p>
-                </div>
-              ))}
             </div>
+            
 
 
 
